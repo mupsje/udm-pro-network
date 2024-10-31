@@ -44,10 +44,10 @@ VLANs:
 | VLAN | CIDR | Medium | SSID | Purpose |
 | ---: | ---: | ------ | ---- | ------- |
 | 1  | 10.0.90.0/24 | Wired 1GbE | n/a | backhaul, management |
-| 10 | 10.0.10.0/24 | Wired/Wireless | jenni.ap | trusted home net |
-| 20 | 10.0.20.0/24 | Wireless | jenni.guest | guests, internet only |
-| 30 | 10.0.30.0/24 | Wireless | jenni.iot | IoT devices, internet only |
-| 40 | 10.0.40.0/24 | Wireless | jenni.media | media devices, internet only |
+| 10 | 10.0.10.0/24 | Wired/Wireless | allreco.ap | trusted home net |
+| 20 | 10.0.20.0/24 | Wireless | allreco.guest | guests, internet only |
+| 30 | 10.0.30.0/24 | Wireless | allreco.iot | IoT devices, internet only |
+| 40 | 10.0.40.0/24 | Wireless | allreco.media | media devices, internet only |
 | 50 | 10.0.50.0/24 | Wired | n/a | PoE camera devices, no internet |
 
 For my network, I chose ranges from the 10/8 private address space, feel free to pick different ranges
@@ -55,7 +55,7 @@ from [RFC1918](https://datatracker.ietf.org/doc/html/rfc1918), e.g. from the 172
 I find it useful to reflect the sub range, e.g. ```.10.*```, to also be the VLAN id, but there is no
 technical need to do so.
 
-Note the 5 switches shown below are purely logical; the physical HW has the UDM and the 2 switches above.
+Note the 5 switches shown below are purely logical; the physical Hardware has the UDM and the 2 switches above.
 By default, the UDM Pro allows full inter-VLAN access, but this site's configuration will by default block
 any inter-VLAN connectivity, and only allow the trusted ```home (10)``` VLAN to initiate connections to the
 ```IoT (30)``` and ```media (40)``` VLANs. Access from/to the ```management (1)``` LAN and trunk is
