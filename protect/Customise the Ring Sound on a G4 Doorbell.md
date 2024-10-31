@@ -38,6 +38,9 @@ Whilst you are in the Protect application, make a note of your Doorbell’s IP a
 The current IP will is listed under Host IP Address.
 
 ## Step 3 – Enabling SSH on UniFi Protect Devices
+Through **`Homeassistant`**, go to settings, then devices and services, then Unifi Protect, choose the doorbell, then under "configuration" under "hidden entities" add the SSH enabled button.
+
+Other option:
 There is no option within the GUI to enable SSH on UniFi Protect devices. It is therefore necessary to modify the UniFi Protect configuration file that resides on the console. This in turn enables SSH on the connected cameras.
 Open your preferred SSH client, PuTTY is a common choice for many people.
 
@@ -95,7 +98,7 @@ Note that if you apply a firmware upgrade or make any changes that cause the doo
 
 
 
-
+source: https://jamiej.co.uk/blog/customise-the-ring-sound-on-a-g4-doorbell/
 
 
 
