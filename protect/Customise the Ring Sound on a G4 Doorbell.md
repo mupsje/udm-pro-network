@@ -74,7 +74,25 @@ Once connected to the doorbell, navigate to `/var/etc/sounds` and upload your cu
 
 Using the WinSCP GUI, navigate to /var/etc/persistent and open the file ubnt_sounds_leds.conf
 
-Find the part of the file with the customSounds entry:
+Find the part of the file with the `customSounds` entry:
+Change the part that currently says `chime.wav` to the filename that you’ve just uploaded and then save the changes to the file.
+
+```
+ "customSounds": {
+    "sounds_ring_button": "../../../../var/etc/sounds/christmas.wav"
+  },
+```
+To apply the new sound file, the process that controls the sounds and LEDs must be restarted –
+
+If using WinSCP, press Shift + Ctrl + T to open a terminal window, and enter `killall ubnt_sounds_leds ` and press enter.
+
+***If preferred, the above step can be completed over SSH instead of through WinSCP. The vi editor is installed on the doorbell allowing you to directly edit the configuration file.***
+
+All being well, if you now push the button on the doorbell, you should be greeted with your custom sound file!
+
+## Firmware Upgrades and Restarts
+Note that if you apply a firmware upgrade or make any changes that cause the doorbell to restart, then the custom wav file may be wiped from it as the storage isn’t persistent. The modifications however to the ubnt_sounds_leds.conf files do persist reboots. This means a re-upload of the sound and restart of the service is usually all that is needed.
+
 
 
 
