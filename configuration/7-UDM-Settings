@@ -1,0 +1,8 @@
+# ARP Timeout on UDM Pro
+
+Under "Devices" - UDMP - Settings 
+
+Network application> Devices Tab> UDM-Pro> Settings> Services> ARP Cache Timeout> 30
+Network application> Devices Tab> UDM-Pro> Setiings> Services> Internet Verification Server> your WAN Ip
+
+
